@@ -1,4 +1,4 @@
-# celonis_case_study
+# Celonis Case Study
 
 Solutions Architect - Interview Challenge
 

@@ -1,0 +1,3 @@
+pycelonis==1.2.9
+graphviz==0.16
+pandas==1.2.1

@@ -34,12 +34,12 @@ For the claims data, the customer has now given you below sample flat file expor
  
 
 ### Helpful links to prepare for the session:
-[Celonis Data Push API](https://{tenant}.{realm}.celonis.cloud/documentation/data-push-api-python/)
-[Celoxtractor](https://celonis.github.io/celoxtractor/) 
-[Pycelonis-API Tutorials](https://celonis.github.io/pycelonis/api_tutorial.html)
-[Celonis IBC Documentation](https://help.celonis.cloud)
-[Celonis IBC Overview](https://help.celonis.cloud/help/display/CIBC/Celonis+Intelligent+Business+Cloud)
-[Data Input Documentation](https://help.celonis.cloud/help/display/CIBC/Data+Input) 
-[SSO Documentation](https://help.celonis.cloud/help/pages/viewpage.action?pageId=12321316)
-[Celonis Reference Documentation](https://celonis.github.io/pycelonis/reference.html)
-[Celonis Security Documentation](https://www.celonis.com/trust-center/)
+- [Celonis Data Push API](https://{tenant}.{realm}.celonis.cloud/documentation/data-push-api-python/)
+- [Celoxtractor](https://celonis.github.io/celoxtractor/) 
+- [Pycelonis-API Tutorials](https://celonis.github.io/pycelonis/api_tutorial.html)
+- [Celonis IBC Documentation](https://help.celonis.cloud)
+- [Celonis IBC Overview](https://help.celonis.cloud/help/display/CIBC/Celonis+Intelligent+Business+Cloud)
+- [Data Input Documentation](https://help.celonis.cloud/help/display/CIBC/Data+Input) 
+- [SSO Documentation](https://help.celonis.cloud/help/pages/viewpage.action?pageId=12321316)
+- [Celonis Reference Documentation](https://celonis.github.io/pycelonis/reference.html)
+- [Celonis Security Documentation](https://www.celonis.com/trust-center/)

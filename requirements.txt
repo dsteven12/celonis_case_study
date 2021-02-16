@@ -1,3 +1,4 @@
-pycelonis==1.2.9
-graphviz==0.16
 pandas==1.2.1
+requests==2.25.1
+pycelonis==1.2.9
+rich==9.11.0

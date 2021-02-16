@@ -1,4 +1,7 @@
 import os
 
-API_URL = os.getenv('API_URL')
-API_TOKEN = os.getenv('API_TOKEN')
+TENANT = "dsteven12-gmail-com"
+REALM = "training"
+URL = os.getenv('API_URL')
+TOKEN = os.getenv('API_TOKEN')
+

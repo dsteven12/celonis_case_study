@@ -24,5 +24,4 @@ with console.status("[bold green]Pushing data...") as status:
     sleep(1)
     console.log(f"[green]Finished pushing data[/green]")
     console.log(f'[bold][red]Done!')
-    #Validates table was created
-    console.log(f'[bold][blue]Validating table: [green]{data_pool.tables}')
+    console.log(f'[bold][blue]Validating table: [green]{data_pool.tables}') #Validates table was created

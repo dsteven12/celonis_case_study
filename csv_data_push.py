@@ -7,18 +7,17 @@ from time import sleep
 
 console = Console()
 
-key = c.TOKEN
-poolId = "6b43443e-0cee-40bc-90fb-e941e42f41f8"
 csvUploadFile = ccd.updated_file # Path to csv file you want to upload
 
-cloud = cloud_api.cloud(c.TENANT, c.REALM, key)
-new_job = cloud.create_job(poolId, "CLAIMS_DATA")
+cloud = cloud_api.cloud(c.TENANT, c.REALM, c.TOKEN)
+new_job = cloud.create_job(c.POOL_ID, "CLAIMS_DATA")
 new_job_id = new_job["id"]
 
+# Provides console status for pushing data chunks and submitting of jobs
 with console.status("[bold green]Uploading Data...") as status:
-    push_chunk = cloud.push_new_chunk(poolId, new_job_id, csvUploadFile)
+    push_chunk = cloud.push_new_chunk(c.POOL_ID, new_job_id, csvUploadFile)
     console.log(f"[green]Finished pushing data! {push_chunk}[/green]")
     sleep(1)
-    submit_job = cloud.submit_job(poolId, new_job_id)
+    submit_job = cloud.submit_job(c.POOL_ID, new_job_id)
     console.log(f"[green]Finished submitting job! {submit_job}[/green]")
     console.log(f'[bold][red]Done!')  

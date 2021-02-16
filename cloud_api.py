@@ -39,14 +39,14 @@ class cloud:
         if upsert:
             job_type = "DELTA"
         if not data_connection_id:
-            payload = {'targetName': targetName, 'type': job_type, 'dataPoolId': pool_id}
+            payload = {'targetName': targetName, 'type': job_type, 'dataPoolId': pool_id, 'fileType': 'CSV'}
         else:
-            payload = {'targetName': targetName, 'type': job_type, 'dataPoolId': pool_id, 'dataConnectionId': data_connection_id}
+            payload = {'targetName': targetName, 'type': job_type, 'dataPoolId': pool_id, 'fileType': 'CSV', 'dataConnectionId': data_connection_id}
         return requests.post(api, headers=self.get_auth(), json=payload).json()
 
     # Push parquet file to job_id and pool
     def push_new_chunk(self, pool_id, job_id, file_path):
-        api = self.get_jobs_api(pool_id) + "/{}/chunks/upserted".format(job_id)
+        api = self.get_jobs_api(pool_id) + "{}/chunks/upserted".format(job_id)
         upload_file = {"file": open(file_path, "rb")}
         return requests.post(api, files=upload_file, headers=self.get_auth())
 

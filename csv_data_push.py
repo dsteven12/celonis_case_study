@@ -8,9 +8,23 @@ from time import sleep
 console = Console()
 
 csvUploadFile = ccd.updated_file # Path to csv file you want to upload
-
 cloud = cloud_api.cloud(c.TENANT, c.REALM, c.TOKEN)
 
+def list_recent_job(job_id: str, pool_id: str) -> None:
+    """
+    Gives job information for currently executed job by checking the job list. 
+    If new_job_id matches job_id, it prints that specific job in the console.
+    """
+    for job in cloud.list_jobs(pool_id):
+        if job_id == job['id']: 
+            console.log(f"[yellow]JOB_ID: {job['id']}") 
+            console.log(f"[blue]TARGET_NAME: {job['targetName']}") 
+            console.log(f"[yellow]JOB_STATUS: {job['status']}") 
+            console.log(f"[blue]FILE_TYPE: {job['fileType']}")
+            console.log(f"[blue]JOB_TYPE: {job['type']}")
+            console.log(f"[yellow]JOB_LOGS: {job['logs']}")
+            console.log(f"[blue]DATA_POOL_ID: {job['dataPoolId']}") 
+    
 
 # Provides console status for pushing data chunks and submitting of jobs
 with console.status("[bold][green]Uploading Data into Celonis...") as status:
@@ -29,14 +43,8 @@ with console.status("[bold][green]Uploading Data into Celonis...") as status:
     console.log(f"[green]Finished submitting job! {submit_job}[/green]")
     sleep(1)
     # List Jobs
-    list_job = cloud.list_jobs(c.POOL_ID)
-    console.log(f"[bold][green]Shows the most recent data jobs executed.")
-    for job in list_job[:1]:
-        console.log(f"[blue]Data_Pool_ID: {job['dataPoolId']}") 
-        console.log(f"[blue]JOB_ID: {job['id']}") 
-        console.log(f"[blue]JOB_STATUS: {job['status']}") 
-        console.log(f"[blue]JOB_LOGS: {job['logs']}")
-    console.log(f"[green]Finished list jobs for status check![/green]")
+    list_recent_job(new_job_id, c.POOL_ID)
+    console.log(f"[bold][green]Finished listing current job for status check![/green]")
     sleep(1)
     console.log(f'[bold][red]Done!') 
 

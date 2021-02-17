@@ -2,7 +2,6 @@ import pandas as pd
 import txt_to_csv as t
 
 #QMNUM and QMTXT contains 1 NULL value
-
 #Turning into dataframe
 df=pd.read_csv(t.csv_file, header=3)
 header_row=list(df.columns)
@@ -44,7 +43,7 @@ df2=drop_rows(df2, -1)
 # Strip header names of whitespace
 df3=df2.rename(columns=lambda x: x.strip())
 
-# Converting strings into Datetime
+# Converting strings into Datetime. Hard_coded for now since strings weren't formatted for conversion.
 datetime_conversion_list = [
     "ERDAT",
     "AEDAT",
@@ -57,6 +56,7 @@ datetime_conversion_list = [
     "LTRUR",
 ]
 
+# Converts columns from above to datetime columns.
 convert_col_to_dt(df3, datetime_conversion_list)
 
 #Changes Schema of DataFrame

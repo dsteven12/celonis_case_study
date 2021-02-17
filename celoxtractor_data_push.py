@@ -6,8 +6,8 @@ from time import sleep
 
 # Global Variables and Envorinment Variables
 connection_settings = {
-    "celonis_url": c.API_URL,
-    "api_token": c.API_TOKEN,
+    "celonis_url": c.URL,
+    "api_token": c.TOKEN,
 } 
 console = Console()
 

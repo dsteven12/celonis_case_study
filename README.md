@@ -20,7 +20,7 @@ We will be expecting you to drive the session and obtain the answers you need to
 
 **Data Integration Oracle EBS** 
 - [ ] Describe the process of extracting data from their Oracle EBS system using the JDBC connector for their procurement process.
-- [ ] Describe at a high level the steps needed for the server team, database team, and network team.
+- [ ] Describe at a high level the steps needed for the [x] server team, [ ] database team, [ ] and network team.
 •	User Authentication
 - [ ] How users will be authenticated in Celonis via SAML?
 

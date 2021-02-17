@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 
+# File Path Location
 root_path = r'D:/celonis_case_study/'
 raw_data_folder = 'raw_data/'
 file_name = 'claims-data-export'

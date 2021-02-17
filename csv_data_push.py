@@ -17,6 +17,7 @@ with console.status("[bold][green]Uploading Data into Celonis...") as status:
     # Create Job
     new_job = cloud.create_job(c.POOL_ID, "CLAIMS_DATA")
     new_job_id = new_job["id"]
+    console.log(f"New job id: {new_job_id}")
     console.log(f"[green]Finished creating job! {new_job}[/green]")
     sleep(1)
     # Push Data Chunks
@@ -29,7 +30,8 @@ with console.status("[bold][green]Uploading Data into Celonis...") as status:
     sleep(1)
     # List Jobs
     list_job = cloud.list_jobs(c.POOL_ID)
-    for job in list_job[:3]:
+    console.log(f"[bold][green]Shows the most recent data jobs executed.")
+    for job in list_job[:1]:
         console.log(f"[blue]Data_Pool_ID: {job['dataPoolId']}") 
         console.log(f"[blue]JOB_ID: {job['id']}") 
         console.log(f"[blue]JOB_STATUS: {job['status']}") 

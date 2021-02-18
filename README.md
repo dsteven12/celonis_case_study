@@ -19,10 +19,10 @@ You are to engage the customer and hold a 10 minute presentation to establish a 
 We will be expecting you to drive the session and obtain the answers you need to draw a rough outline of how you would implement and deploy Celonis to the client. You will need to come prepared to present the following:
 
 **Data Integration Oracle EBS** 
-- [ ] Describe the process of extracting data from their Oracle EBS system using the JDBC connector for their procurement process.
-- [ ] Describe at a high level the steps needed for the [x] server team, [ ] database team, [ ] and network team.
+- [x] Describe the process of extracting data from their Oracle EBS system using the JDBC connector for their procurement process.
+- [x] Describe at a high level the steps needed for the [x] server team, [x] database team, [x] and network team.
 •	User Authentication
-- [ ] How users will be authenticated in Celonis via SAML?
+- [x] How users will be authenticated in Celonis via SAML?
 
 Please prepare a couple slides to share this information with ACME’s security architect.
 
